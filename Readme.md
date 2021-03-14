@@ -1,4 +1,5 @@
 # Carrom- Clean Strike
+## Start Point of the Service is index.js
 ## Format to be followed for input
 
 ### 1. The input file is InputFile.txt
