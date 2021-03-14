@@ -2,7 +2,8 @@
     Developer- Sanidhya Pawar
     Start Date- 12:00 PM, 14th March, 2021.
     Last Modified Date- 07:00 PM, 14th March, 2021.
-    Command to start the software- node index
+    Test Method- ./Tests/test.js
+    Command to start the service- "node index"
     ------------------------------------------------------------------------------------------------------------------------------------------
 */
 
@@ -61,7 +62,9 @@ try {
       /*
         "When the coins are exhausted on the board, if the highest scorer is not leading by, at
         least, 3 points or does not have a minimum of 5 points, the game is considered a draw"
-        As in the condition, it is mentioned only when the coins are exhausted, then can a match be drawn
+        As in the condition, it is mentioned only when the coins are exhausted, then can a match be drawn,
+        but lets say we have set of input where in the coins are not exhausted, or the input is incomplete
+        in that case, we cant come to a conclusion.
       */
       console.log(
         `Couldn't reach to any conclusion with the given input..(Can be considered as Match drawn, but kept a seperate case for more clarity). Final Score: Player1: ${Player1.getPoints()} : Player2: ${Player2.getPoints()}`
