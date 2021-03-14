@@ -13,10 +13,10 @@ class DataPreProcessing {
     this.playerTurn = this.playerTurn === 1 ? 2 : 1;
     return true;
   }
-  static getInputFromFile() {
+  static getInputFromFile(filePath) {
     try {
       // read contents of the file
-      const data = fs.readFileSync("InputFile.txt", "UTF-8");
+      const data = fs.readFileSync(filePath, "UTF-8");
 
       // split the contents by new line
       const lines = data.split(/\r?\n/);

@@ -1,8 +1,16 @@
+/*
+    Developer- Sanidhya Pawar
+    Start Date- 12:00 PM, 14th March, 2021.
+    Last Modified Date- 07:00 PM, 14th March, 2021.
+    Command to start the software- node index
+    ------------------------------------------------------------------------------------------------------------------------------------------
+*/
+
+//Initialize all the details
 const Board = require("./Board");
 const Player = require("./Player");
 const DataPreProcessing = require("./DataPreProcessing");
 
-//Initialize all the details
 try {
   //Board constructor takes in two parameters, number of black coins and number of red coins
   const newBoard = new Board(9, 1);
@@ -13,7 +21,7 @@ try {
   const Player2 = new Player(2);
 
   //Static class to get the structured input from file.
-  const reponseObj = DataPreProcessing.getInputFromFile();
+  const reponseObj = DataPreProcessing.getInputFromFile("InputFile.txt");
 
   if (!reponseObj.success) {
     console.log(
@@ -23,6 +31,7 @@ try {
     const inputArr = reponseObj.inputArr;
     let winner = null;
     let response = { draw: false, win: false };
+    console.log(`Intermediate Scorings: `);
     for (let i = 0; i < inputArr.length; i++) {
       //Method to handle all the conditions, constraints and simulate the process.
       response = newBoard.simulate(
@@ -34,14 +43,15 @@ try {
         winner = inputArr[i][0];
         break;
       }
-      console.log(Player1.getPoints() + " " + Player2.getPoints());
+      console.log(
+        `Player1: ${Player1.getPoints()}  Player2: ${Player2.getPoints()}`
+      );
     }
     if (response.draw) {
       console.log(
         `Match Drawn. Final Score- ${Player1.getPoints()}:${Player2.getPoints()}`
       );
-    }
-    else if (response.win) {
+    } else if (response.win) {
       console.log(
         `Player${winner} won the game. Final Score- ${
           winner === 1 ? Player1.getPoints() : Player2.getPoints()
