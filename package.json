@@ -2,7 +2,7 @@
   "name": "sahaj",
   "version": "1.0.0",
   "description": "Carrom Game",
-  "main": "index.js",
+  "main": "Main.js",
   "scripts": {
     "test": "nyc mocha Tests/test.js"
   },

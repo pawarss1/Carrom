@@ -57,6 +57,8 @@ class Board {
         if successive misses are 3, then a point should be reduced, 
         hence returning true from this method to driver method  
       */
+     
+      //Initializing the successive miss value to 0 again
       curPlayer.updateSuccessiveMissesBy(-curPlayer.getSuccessiveMisses());
       return true;
     }

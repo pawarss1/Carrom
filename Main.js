@@ -6,12 +6,11 @@
     Command to start the service- "node index"
     ------------------------------------------------------------------------------------------------------------------------------------------
 */
-
-//Initialize all the details
 const Board = require("./Board");
 const Player = require("./Player");
 const DataPreProcessing = require("./DataPreProcessing");
 
+//Initialize all the details
 try {
   //Board constructor takes in two parameters, number of black coins and number of red coins
   const newBoard = new Board(9, 1);
@@ -33,6 +32,7 @@ try {
     let winner = null;
     let response = { draw: false, win: false };
     console.log(`Intermediate Scorings: `);
+    
     for (let i = 0; i < inputArr.length; i++) {
       //Method to handle all the conditions, constraints and simulate the process.
       response = newBoard.simulate(

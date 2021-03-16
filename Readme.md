@@ -1,7 +1,8 @@
 # Carrom- Clean Strike
 ## Start Point of the Service is index.js
 ## Format to be followed for input
-### Command to start the service- node index
+### Command to start the service- node Main
+### Command to test the service- npm test (this will take around 2-3 seconds, as this will test all the modules used.)
 ### 1. The input file is InputFile.txt
 ### 2. Player#>outcome, where outcome >= 1 && outcome <= 6 and # can be either {1, 2}, and the input should be in the alternating state, although there is a check for this alternating player turns.
 ### The outcomes from 1 to 6 are as follows-
