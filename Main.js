@@ -1,9 +1,10 @@
 /*
     Developer- Sanidhya Pawar
     Start Date- 12:00 PM, 14th March, 2021.
-    Last Modified Date- 07:00 PM, 14th March, 2021.
+    Last Modified Date- 12:19 PM, 16th March, 2021.
     Test Method- ./Tests/test.js
     Command to start the service- "node Main"
+    Objective- To simulate the carrom board game with mentioned conditions in the assignment.
     ------------------------------------------------------------------------------------------------------------------------------------------
 */
 const Board = require("./Board");

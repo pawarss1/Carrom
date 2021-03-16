@@ -5,6 +5,10 @@ class Player {
     this.successiveMisses = 0;
     this.foulCounts = 0;
   }
+  /*
+    Getter and Updatter / Setter methods, 
+    as a result not exposing the variables directly to the foriegn classes 
+  */
   updatePointsBy(value) {
     this.points += value;
   }

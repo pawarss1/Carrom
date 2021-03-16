@@ -1,8 +1,11 @@
 const fs = require("fs");
 
 class DataPreProcessing {
-  static playerTurn = 1;
+  //Assumption- Player1 will go first
+  static playerTurn = 1; 
+
   static checkIfValid(playerNum, outcome) {
+    //Check for alternating input and valid outcome number
     if (
       this.playerTurn !== Number(playerNum) ||
       Number(outcome) > 6 ||
@@ -13,6 +16,7 @@ class DataPreProcessing {
     this.playerTurn = this.playerTurn === 1 ? 2 : 1;
     return true;
   }
+  
   static getInputFromFile(filePath) {
     try {
       // read contents of the file
