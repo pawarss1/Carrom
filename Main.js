@@ -3,7 +3,7 @@
     Start Date- 12:00 PM, 14th March, 2021.
     Last Modified Date- 07:00 PM, 14th March, 2021.
     Test Method- ./Tests/test.js
-    Command to start the service- "node index"
+    Command to start the service- "node Main"
     ------------------------------------------------------------------------------------------------------------------------------------------
 */
 const Board = require("./Board");
