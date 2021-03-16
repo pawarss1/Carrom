@@ -1,7 +1,7 @@
 # Carrom- Clean Strike
 ## Start Point of the Service is Main.js
 ## Steps to start the service-
-### 1. cd to the working root directory
+### 1. cd to the working root directory (Goto step 2, if the repo is forked / cloned from github, else jump to the step 3 directly.)
 ### 2. Execute the command "npm install" -->this will install all the required dependencies
 ### 3. On successful installation of the dependencies, execute the command to start the service- node Main
 ### Command to test the service- npm test (this will take around 2-3 seconds, as this will test all the modules used. Also note that the present working directory for this should be root directory.)
