@@ -1,5 +1,5 @@
 class Player {
-  constructor(id) {
+  constructor([id]) {
     this.points = 0;
     this.id = id;
     this.successiveMisses = 0;

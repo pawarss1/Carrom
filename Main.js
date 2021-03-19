@@ -1,39 +1,45 @@
 /*
     Developer- Sanidhya Pawar
     Start Date- 12:00 PM, 14th March, 2021.
-    Last Modified Date- 12:19 PM, 16th March, 2021.
+    Last Modified Date- 12:19 PM, 19th March, 2021.
     Test Method- ./Tests/test.js
     Command to start the service- "node Main"
     Objective- To simulate the carrom board game with mentioned conditions in the assignment.
+    Design Pattern Followed- Factory Design Pattern
     ------------------------------------------------------------------------------------------------------------------------------------------
 */
-const Board = require("./Board");
-const Player = require("./Player");
+const CreateInstancesFactory = require("./CreateInstancesFactory");
 const DataPreProcessing = require("./DataPreProcessing");
 
 //Initialize all the details
 try {
-  //Board constructor takes in two parameters, number of black coins and number of red coins
-  const newBoard = new Board(9, 1);
-  /*Player constructor takes in one parameter, Player Serial Number or Id. 
-  This should be same as # mentioned in the input file */
-
-  const Player1 = new Player(1);
-  const Player2 = new Player(2);
-
   //Static class to get the structured input from file.
   const reponseObj = DataPreProcessing.getInputFromFile("InputFile.txt");
-
   if (!reponseObj.success) {
     console.log(
       "Error while parsing the input file, maybe due to improper input format, Please check Readme file for better understanding."
     );
   } else {
+    //Board constructor takes in two parameters, number of black coins and number of red coins
+    const newBoard = CreateInstancesFactory.createInstance("Board", [
+      reponseObj.coins["Black"],
+      reponseObj.coins["Red"],
+    ]);
+
+    /*
+    Player constructor takes in one parameter, Player Serial Number or Id. 
+    This should be same as # mentioned in the input file 
+    */
+
+    //This factory returns the instance of the Player Class; with ID as parameter.
+    const Player1 = CreateInstancesFactory.createInstance("Player", [1]);
+    const Player2 = CreateInstancesFactory.createInstance("Player", [2]);
+
     const inputArr = reponseObj.inputArr;
     let winner = null;
     let response = { draw: false, win: false };
     console.log(`Intermediate Scorings: `);
-    
+
     for (let i = 0; i < inputArr.length; i++) {
       //Method to handle all the conditions, constraints and simulate the process.
       response = newBoard.simulate(

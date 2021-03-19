@@ -1,3 +1,5 @@
+Black Coins>10
+Red Coins>6
 1>1
 2>1
 1>4

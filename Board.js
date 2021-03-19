@@ -1,5 +1,5 @@
 class Board {
-  constructor(blackCoinsCount, redCoinsCount) {
+  constructor([blackCoinsCount, redCoinsCount]) {
     this.blackCoinsCount = blackCoinsCount;
     this.redCoinsCount = redCoinsCount;
   }
